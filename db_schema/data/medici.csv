@@ -1,0 +1,7 @@
+ID_MEDIC,NUME,PRENUME,ID_SPECIALITATE,TELEFON,EMAIL,DATA_ANGAJARII,SALAR
+1,Georgescu,George,1,2783004335,george.georgescu@clinicadentara.ro,2020-04-04T00:00:00,10000
+2,Ionescu,Elena,1,3095127438,elena.ionescu@clinicadentara.ro,2019-11-03T00:00:00,12000
+3,Georgescu,Vasile,1,1800757123,vasile.georgescu@clinicadentara.ro,2021-12-10T00:00:00,9000
+4,Mihai,Elena,1,6717674771,elena.mihai@clinicadentara.ro,2018-08-02T00:00:00,8000
+5,Dumitrescu,Andrei,2,9378452307,andrei.dumitrescu@clinicadentara.ro,2018-12-01T00:00:00,15000
+6,Tomescu,Elena,3,2138104866,elena.ionescu@clinicadentara.ro,2018-03-30T00:00:00,9000

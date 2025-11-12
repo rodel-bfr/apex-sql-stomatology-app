@@ -1,0 +1,369 @@
+prompt --application/pages/page_00015
+begin
+--   Manifest
+--     PAGE: 00015
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2024.11.30'
+,p_release=>'24.2.8'
+,p_default_workspace_id=>54488279276457015437
+,p_default_application_id=>29925
+,p_default_id_offset=>0
+,p_default_owner=>'WKSP_RODELWS'
+);
+wwv_flow_imp_page.create_page(
+ p_id=>15
+,p_name=>'Manager Dashboard'
+,p_alias=>'MANAGER-DASHBOARD1'
+,p_step_title=>'Manager Dashboard'
+,p_autocomplete_on_off=>'OFF'
+,p_page_template_options=>'#DEFAULT#'
+,p_protection_level=>'C'
+,p_page_component_map=>'13'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(1414768411047747333)
+,p_plug_name=>'Recenzie Medici'
+,p_title=>'Recenzie Medici'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_component_template_options=>'#DEFAULT#'
+,p_plug_template=>4072358936313175081
+,p_plug_display_sequence=>50
+,p_plug_new_grid_row=>false
+,p_query_type=>'TABLE'
+,p_query_table=>'V_RECENZIE_MEDIE_MEDIC'
+,p_include_rowid_column=>false
+,p_plug_source_type=>'NATIVE_JET_CHART'
+);
+wwv_flow_imp_page.create_jet_chart(
+ p_id=>wwv_flow_imp.id(1414768521135747334)
+,p_region_id=>wwv_flow_imp.id(1414768411047747333)
+,p_chart_type=>'bar'
+,p_animation_on_display=>'auto'
+,p_animation_on_data_change=>'auto'
+,p_orientation=>'vertical'
+,p_data_cursor=>'auto'
+,p_data_cursor_behavior=>'auto'
+,p_hover_behavior=>'dim'
+,p_stack=>'off'
+,p_connect_nulls=>'Y'
+,p_sorting=>'label-asc'
+,p_fill_multi_series_gaps=>true
+,p_zoom_and_scroll=>'off'
+,p_tooltip_rendered=>'Y'
+,p_show_series_name=>true
+,p_show_group_name=>true
+,p_show_value=>true
+,p_legend_rendered=>'off'
+);
+wwv_flow_imp_page.create_jet_chart_series(
+ p_id=>wwv_flow_imp.id(1414768668741747335)
+,p_chart_id=>wwv_flow_imp.id(1414768521135747334)
+,p_seq=>10
+,p_name=>'Recenzie Medici'
+,p_data_source_type=>'TABLE'
+,p_max_row_count=>20
+,p_query_table=>'V_RECENZIE_MEDIE_MEDIC'
+,p_include_rowid_column=>false
+,p_items_value_column_name=>'Recenzie Medie'
+,p_group_short_desc_column_name=>'Nume Medic'
+,p_items_label_column_name=>'Nume Medic'
+,p_items_short_desc_column_name=>'Recenzie Medie'
+,p_assigned_to_y2=>'off'
+,p_items_label_rendered=>false
+);
+wwv_flow_imp_page.create_jet_chart_axis(
+ p_id=>wwv_flow_imp.id(1414768709459747336)
+,p_chart_id=>wwv_flow_imp.id(1414768521135747334)
+,p_axis=>'x'
+,p_is_rendered=>'on'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_major_tick_rendered=>'auto'
+,p_minor_tick_rendered=>'auto'
+,p_tick_label_rendered=>'on'
+,p_tick_label_rotation=>'auto'
+,p_tick_label_position=>'outside'
+);
+wwv_flow_imp_page.create_jet_chart_axis(
+ p_id=>wwv_flow_imp.id(1414768813085747337)
+,p_chart_id=>wwv_flow_imp.id(1414768521135747334)
+,p_axis=>'y'
+,p_is_rendered=>'on'
+,p_format_scaling=>'auto'
+,p_scaling=>'linear'
+,p_baseline_scaling=>'zero'
+,p_position=>'auto'
+,p_major_tick_rendered=>'auto'
+,p_minor_tick_rendered=>'auto'
+,p_tick_label_rendered=>'on'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(1456736125918471176)
+,p_plug_name=>'Evolutie programari 2023 - 2024'
+,p_title=>'Evolutie programari 2023 - 2024'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_plug_template=>4072358936313175081
+,p_plug_display_sequence=>20
+,p_query_type=>'TABLE'
+,p_query_table=>'V_TOTAL_PROGRAMARI_PE_LUNA'
+,p_query_order_by_type=>'STATIC'
+,p_query_order_by=>'TO_CHAR(data_programare, ''YYYY''), TO_CHAR(data_programare, ''MM'')'
+,p_include_rowid_column=>false
+,p_plug_source_type=>'NATIVE_JET_CHART'
+);
+wwv_flow_imp_page.create_jet_chart(
+ p_id=>wwv_flow_imp.id(1456736586325471176)
+,p_region_id=>wwv_flow_imp.id(1456736125918471176)
+,p_chart_type=>'area'
+,p_animation_on_display=>'auto'
+,p_animation_on_data_change=>'auto'
+,p_hide_and_show_behavior=>'withRescale'
+,p_hover_behavior=>'dim'
+,p_stack=>'off'
+,p_stack_label=>'off'
+,p_connect_nulls=>'Y'
+,p_value_position=>'auto'
+,p_sorting=>'label-asc'
+,p_fill_multi_series_gaps=>true
+,p_tooltip_rendered=>'Y'
+,p_show_series_name=>true
+,p_show_group_name=>true
+,p_show_value=>true
+,p_show_label=>true
+,p_show_row=>true
+,p_show_start=>true
+,p_show_end=>true
+,p_show_progress=>true
+,p_show_baseline=>true
+,p_legend_rendered=>'off'
+,p_legend_position=>'auto'
+,p_overview_rendered=>'off'
+,p_horizontal_grid=>'auto'
+,p_vertical_grid=>'auto'
+,p_gauge_orientation=>'circular'
+,p_gauge_plot_area=>'on'
+,p_show_gauge_value=>true
+);
+wwv_flow_imp_page.create_jet_chart_series(
+ p_id=>wwv_flow_imp.id(1456738206143471178)
+,p_chart_id=>wwv_flow_imp.id(1456736586325471176)
+,p_seq=>10
+,p_name=>'Series 1'
+,p_data_source_type=>'TABLE'
+,p_max_row_count=>20
+,p_query_table=>'V_TOTAL_PROGRAMARI_PE_LUNA'
+,p_include_rowid_column=>false
+,p_items_value_column_name=>'Total Programari'
+,p_group_name_column_name=>'Total Programari'
+,p_group_short_desc_column_name=>'Luna si Anul'
+,p_items_label_column_name=>'Luna si Anul'
+,p_items_short_desc_column_name=>'Total Programari'
+,p_line_type=>'auto'
+,p_marker_rendered=>'auto'
+,p_marker_shape=>'auto'
+,p_assigned_to_y2=>'off'
+,p_items_label_rendered=>false
+);
+wwv_flow_imp_page.create_jet_chart_axis(
+ p_id=>wwv_flow_imp.id(1456737015524471177)
+,p_chart_id=>wwv_flow_imp.id(1456736586325471176)
+,p_axis=>'x'
+,p_is_rendered=>'on'
+,p_baseline_scaling=>'zero'
+,p_major_tick_rendered=>'auto'
+,p_minor_tick_rendered=>'auto'
+,p_tick_label_rendered=>'on'
+,p_zoom_order_seconds=>false
+,p_zoom_order_minutes=>false
+,p_zoom_order_hours=>false
+,p_zoom_order_days=>false
+,p_zoom_order_weeks=>false
+,p_zoom_order_months=>false
+,p_zoom_order_quarters=>false
+,p_zoom_order_years=>false
+);
+wwv_flow_imp_page.create_jet_chart_axis(
+ p_id=>wwv_flow_imp.id(1456737674417471178)
+,p_chart_id=>wwv_flow_imp.id(1456736586325471176)
+,p_axis=>'y'
+,p_is_rendered=>'on'
+,p_baseline_scaling=>'zero'
+,p_position=>'auto'
+,p_major_tick_rendered=>'auto'
+,p_minor_tick_rendered=>'auto'
+,p_tick_label_rendered=>'on'
+,p_zoom_order_seconds=>false
+,p_zoom_order_minutes=>false
+,p_zoom_order_hours=>false
+,p_zoom_order_days=>false
+,p_zoom_order_weeks=>false
+,p_zoom_order_months=>false
+,p_zoom_order_quarters=>false
+,p_zoom_order_years=>false
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(1456738812733471179)
+,p_plug_name=>'Situatia Recenziilor'
+,p_title=>'Situatia Recenziilor'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_plug_template=>4072358936313175081
+,p_plug_display_sequence=>30
+,p_query_type=>'TABLE'
+,p_query_table=>'V_SITUATIE_RECENZII'
+,p_include_rowid_column=>false
+,p_plug_source_type=>'NATIVE_JET_CHART'
+);
+wwv_flow_imp_page.create_jet_chart(
+ p_id=>wwv_flow_imp.id(1456739247471471179)
+,p_region_id=>wwv_flow_imp.id(1456738812733471179)
+,p_chart_type=>'pie'
+,p_animation_on_display=>'auto'
+,p_animation_on_data_change=>'auto'
+,p_hide_and_show_behavior=>'withRescale'
+,p_hover_behavior=>'dim'
+,p_stack=>'off'
+,p_stack_label=>'off'
+,p_connect_nulls=>'Y'
+,p_value_position=>'auto'
+,p_sorting=>'label-asc'
+,p_fill_multi_series_gaps=>true
+,p_tooltip_rendered=>'Y'
+,p_show_series_name=>true
+,p_show_group_name=>true
+,p_show_value=>true
+,p_show_label=>true
+,p_show_row=>true
+,p_show_start=>true
+,p_show_end=>true
+,p_show_progress=>true
+,p_show_baseline=>true
+,p_legend_rendered=>'off'
+,p_legend_position=>'auto'
+,p_overview_rendered=>'off'
+,p_horizontal_grid=>'auto'
+,p_vertical_grid=>'auto'
+,p_gauge_orientation=>'circular'
+,p_gauge_plot_area=>'on'
+,p_show_gauge_value=>true
+);
+wwv_flow_imp_page.create_jet_chart_series(
+ p_id=>wwv_flow_imp.id(1456739751118471180)
+,p_chart_id=>wwv_flow_imp.id(1456739247471471179)
+,p_seq=>10
+,p_name=>'Situatia Recenziilor'
+,p_data_source_type=>'TABLE'
+,p_max_row_count=>20
+,p_query_table=>'V_SITUATIE_RECENZII'
+,p_include_rowid_column=>false
+,p_items_value_column_name=>'Numar Recenzii'
+,p_items_label_column_name=>'RECENZIE'
+,p_items_short_desc_column_name=>'Numar Recenzii'
+,p_items_label_rendered=>true
+,p_items_label_position=>'auto'
+,p_items_label_display_as=>'LABEL'
+);
+wwv_flow_imp_page.create_page_plug(
+ p_id=>wwv_flow_imp.id(1456740305105471180)
+,p_plug_name=>'Numar de Clienti per Medic'
+,p_title=>'Numar de Clienti per Medic'
+,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
+,p_plug_template=>4072358936313175081
+,p_plug_display_sequence=>40
+,p_plug_new_grid_row=>false
+,p_query_type=>'TABLE'
+,p_query_table=>'V_NUMAR_CLIENTI_PER_MEDIC'
+,p_include_rowid_column=>false
+,p_plug_source_type=>'NATIVE_JET_CHART'
+);
+wwv_flow_imp_page.create_jet_chart(
+ p_id=>wwv_flow_imp.id(1456740737089471180)
+,p_region_id=>wwv_flow_imp.id(1456740305105471180)
+,p_chart_type=>'bar'
+,p_animation_on_display=>'auto'
+,p_animation_on_data_change=>'auto'
+,p_orientation=>'vertical'
+,p_hide_and_show_behavior=>'withRescale'
+,p_hover_behavior=>'dim'
+,p_stack=>'off'
+,p_stack_label=>'off'
+,p_connect_nulls=>'Y'
+,p_value_position=>'auto'
+,p_sorting=>'label-asc'
+,p_fill_multi_series_gaps=>true
+,p_tooltip_rendered=>'Y'
+,p_show_series_name=>true
+,p_show_group_name=>true
+,p_show_value=>true
+,p_show_label=>true
+,p_show_row=>true
+,p_show_start=>true
+,p_show_end=>true
+,p_show_progress=>true
+,p_show_baseline=>true
+,p_legend_rendered=>'off'
+,p_legend_position=>'auto'
+,p_overview_rendered=>'off'
+,p_horizontal_grid=>'auto'
+,p_vertical_grid=>'auto'
+,p_gauge_orientation=>'circular'
+,p_gauge_plot_area=>'on'
+,p_show_gauge_value=>true
+);
+wwv_flow_imp_page.create_jet_chart_series(
+ p_id=>wwv_flow_imp.id(1456742482613471182)
+,p_chart_id=>wwv_flow_imp.id(1456740737089471180)
+,p_seq=>10
+,p_name=>'Numar de Clienti per Medic'
+,p_data_source_type=>'TABLE'
+,p_max_row_count=>20
+,p_query_table=>'V_NUMAR_CLIENTI_PER_MEDIC'
+,p_include_rowid_column=>false
+,p_items_value_column_name=>'Numar clienti'
+,p_group_short_desc_column_name=>'Medic'
+,p_items_label_column_name=>'Medic'
+,p_items_short_desc_column_name=>'Numar clienti'
+,p_assigned_to_y2=>'off'
+,p_items_label_rendered=>false
+);
+wwv_flow_imp_page.create_jet_chart_axis(
+ p_id=>wwv_flow_imp.id(1456741238881471181)
+,p_chart_id=>wwv_flow_imp.id(1456740737089471180)
+,p_axis=>'x'
+,p_is_rendered=>'on'
+,p_baseline_scaling=>'zero'
+,p_major_tick_rendered=>'auto'
+,p_minor_tick_rendered=>'auto'
+,p_tick_label_rendered=>'on'
+,p_zoom_order_seconds=>false
+,p_zoom_order_minutes=>false
+,p_zoom_order_hours=>false
+,p_zoom_order_days=>false
+,p_zoom_order_weeks=>false
+,p_zoom_order_months=>false
+,p_zoom_order_quarters=>false
+,p_zoom_order_years=>false
+);
+wwv_flow_imp_page.create_jet_chart_axis(
+ p_id=>wwv_flow_imp.id(1456741889032471181)
+,p_chart_id=>wwv_flow_imp.id(1456740737089471180)
+,p_axis=>'y'
+,p_is_rendered=>'on'
+,p_baseline_scaling=>'zero'
+,p_position=>'auto'
+,p_major_tick_rendered=>'auto'
+,p_minor_tick_rendered=>'auto'
+,p_tick_label_rendered=>'on'
+,p_zoom_order_seconds=>false
+,p_zoom_order_minutes=>false
+,p_zoom_order_hours=>false
+,p_zoom_order_days=>false
+,p_zoom_order_weeks=>false
+,p_zoom_order_months=>false
+,p_zoom_order_quarters=>false
+,p_zoom_order_years=>false
+);
+wwv_flow_imp.component_end;
+end;
+/

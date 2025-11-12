@@ -1,0 +1,44 @@
+---
+# ====== Page: Global Page ===================================
+id: 0
+identification: 
+  name: Global Page
+
+dynamic-actions: 
+- # ====== Dynamic Action: Auto Collapse Menu ==================
+  id: 80828561567531258927
+  identification: 
+    name: Auto Collapse Menu
+
+  execution: 
+    sequence: 10
+    event-scope: Static
+
+  when: 
+    event: Page Load
+
+  actions: 
+  - # ====== Action: Execute JavaScript Code =====================
+    id: 80828561698084258928
+    identification: 
+      action: Execute JavaScript Code
+
+    settings: 
+      code: |
+        $("#t_TreeNav").on("treeviewactivatenode", function(e, ui) {
+            var n$ = $(e.originalEvent.target).closest(".a-TreeView-content");
+            if (ui.nodes.length > 0 && ui.nodes[0].link === "") {
+                if (n$.parent().hasClass("is-expandable")) {
+                    $(this).treeView("expand", n$)
+                } else if (n$.parent().hasClass("is-collapsible")) {
+                    $(this).treeView("collapse", n$)
+                }
+            }
+        });
+
+    execution: 
+      sequence: 10
+      event: Auto Collapse Menu # 80828561567531258927
+      fire-when-event-result-is: True
+      fire-on-initialization: false
+

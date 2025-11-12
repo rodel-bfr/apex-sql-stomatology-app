@@ -1,0 +1,376 @@
+---
+- # ====== List: Navigation Menu ===============================
+  id: 109180019459283052
+  identification: 
+    name: Navigation Menu
+
+  subscription: 
+    version-number: 15599895024936
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: Adaugare Date ================================
+    id: 124606108552506231
+    label: 
+      label: Adaugare Date
+
+    icon: 
+      image/icon-css-classes: fa-database-plus
+
+    layout: 
+      sequence: 20
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 3
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Modificare Date ==============================
+    id: 127390465314878382
+    label: 
+      label: Modificare Date
+
+    icon: 
+      image/icon-css-classes: fa-database-edit
+
+    layout: 
+      sequence: 30
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 4
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Adaugare Medici ==============================
+    id: 131798611676667849
+    label: 
+      label: Adaugare Medici
+
+    icon: 
+      image/icon-css-classes: fa-address-card-o
+
+    layout: 
+      sequence: 40
+      parent-entry: Adaugare Date # 124606108552506231
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 6
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:6:&SESSION.::&DEBUG.::::'
+        page: 6 # Adaugare Medici
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Modificare Date Medici =======================
+    id: 145491799191235635
+    label: 
+      label: Modificare Date Medici
+
+    icon: 
+      image/icon-css-classes: fa-user-edit
+
+    layout: 
+      sequence: 50
+      parent-entry: Modificare Date # 127390465314878382
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 8
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:8:&APP_SESSION.::&DEBUG.:::'
+        page: 8 # Modificare Date Medici
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Rapoarte =====================================
+    id: 1403021621169473893
+    label: 
+      label: Rapoarte
+
+    icon: 
+      image/icon-css-classes: fa-area-chart
+
+    layout: 
+      sequence: 11
+
+    is-current: 
+      type: Target Page
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Adaugare Specialitate ========================
+    id: 1407173967162268926
+    label: 
+      label: Adaugare Specialitate
+
+    icon: 
+      image/icon-css-classes: fa-nurse
+
+    layout: 
+      sequence: 60
+      parent-entry: Adaugare Date # 124606108552506231
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 5
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:5:&APP_SESSION.::&DEBUG.:::'
+        page: 5 # Adaugare Specialitate
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Adaugare Sursa Recomandare ===================
+    id: 1420553550213879995
+    label: 
+      label: Adaugare Sursa Recomandare
+
+    icon: 
+      image/icon-css-classes: fa-users-alt
+
+    layout: 
+      sequence: 70
+      parent-entry: Adaugare Date # 124606108552506231
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 9
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:9:&APP_SESSION.::&DEBUG.:::'
+        page: 9 # Adaugare Sursa Recomandare
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Modificare Stoc Produse ======================
+    id: 1429507691755712306
+    label: 
+      label: Modificare Stoc Produse
+
+    icon: 
+      image/icon-css-classes: fa-package
+
+    layout: 
+      sequence: 80
+      parent-entry: Modificare Date # 127390465314878382
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 12
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:12:&APP_SESSION.::&DEBUG.:::'
+        page: 12 # Modificare Stoc Produse
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Informatii Medici ============================
+    id: 1432602228902765299
+    label: 
+      label: Informatii Medici
+
+    icon: 
+      image/icon-css-classes: fa-user-md
+
+    layout: 
+      sequence: 90
+      parent-entry: Rapoarte # 1403021621169473893
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 14
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:14:&APP_SESSION.::&DEBUG.:::'
+        page: 14 # Informatii Medici
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Dashboard ====================================
+    id: 1468939724563732961
+    label: 
+      label: Dashboard
+
+    icon: 
+      image/icon-css-classes: fa-home
+
+    layout: 
+      sequence: 1
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:15:&SESSION.::&DEBUG.::::'
+        page: 15 # Manager Dashboard
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+  - # ====== Entry: Venituri Lunare Generate de Medic ============
+    id: 1492520996188347259
+    label: 
+      label: Venituri Lunare Generate de Medic
+
+    icon: 
+      image/icon-css-classes: fa-money-bag
+
+    layout: 
+      sequence: 100
+      parent-entry: Rapoarte # 1403021621169473893
+
+    is-current: 
+      type: Pages
+      pages: 
+      - 2
+
+    link: 
+      target: 
+        url: 'f?p=&APP_ID.:2:&APP_SESSION.::&DEBUG.:::'
+        page: 2 # Venituri Lunare Generate de Medic
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+- # ====== List: Navigation Bar ================================
+  id: 109181263864283054
+  identification: 
+    name: Navigation Bar
+
+  subscription: 
+    version-number: 15599343825592
+
+  source: 
+    type: Static Values
+
+  entries: 
+  - # ====== Entry: &APP_USER. ===================================
+    id: 109193222080283069
+    label: 
+      label: '&APP_USER.'
+
+    icon: 
+      image/icon-css-classes: fa-user
+
+    layout: 
+      sequence: 10
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: '#'
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+      2.: has-username
+
+  - # ====== Entry: --- ==========================================
+    id: 109193716475283070
+    label: 
+      label: '---'
+
+    layout: 
+      sequence: 20
+      parent-entry: '&APP_USER.' # 109193222080283069
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: separator
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+    server-side-condition: 
+      type: User is Authenticated (not public)
+
+  - # ====== Entry: Sign Out =====================================
+    id: 109194171494283070
+    label: 
+      label: Sign Out
+
+    icon: 
+      image/icon-css-classes: fa-sign-out
+
+    layout: 
+      sequence: 30
+      parent-entry: '&APP_USER.' # 109193222080283069
+
+    is-current: 
+      type: Target Page
+
+    link: 
+      target: '&LOGOUT_URL.'
+
+    click-counting: 
+      count-clicks: false
+
+    user-defined-attributes: 
+      translatable: false
+
+    server-side-condition: 
+      type: User is Authenticated (not public)
+

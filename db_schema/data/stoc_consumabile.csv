@@ -1,0 +1,21 @@
+ID_PRODUS,NUME_PRODUS,CANTITATE,PRET_UNITAR
+1,Manusi Latex,240,.5
+2,Siringi,100,1
+3,Adeziv Dentar,50,120
+4,Anaestezic Local,17,25
+5,Masca Chirurgicala,100,.75
+6,Banda de Ortodontie,66,10
+7,Alginat,16,80
+8,Compozit Dentar,70,150
+9,Clorhexidina,65,35
+10,Periute Interdentare,80,5
+11,Cleste Extractie,57,300
+12,Ace Endodontice,66,20
+13,Plombe Provisorii,35,40
+14,Bonding Dentar,10,100
+15,Pasta Profilaxie,70,15
+16,Pasta Gingivala,48,8
+17,Folie de Sterilizare,77,.5
+18,Material de Imprimare,47,200
+19,Iglu Steril,91,25
+20,Sutura Chirurgicala,82,50

@@ -1,0 +1,82 @@
+---
+- # ====== List of Values: SPECIALITATE.NUME_SPECIALITATE ======
+  id: 131800645741667934
+  identification: 
+    name: SPECIALITATE.NUME_SPECIALITATE
+
+  subscription: 
+    version-number: 15599352160370
+
+  source: 
+    location: Local Database
+    type: Table / View
+    table-owner: Parsing Schema
+    table-name: SPECIALITATE
+
+  column-mapping: 
+    return: ID_SPECIALITATE
+    display: NUME_SPECIALITATE
+    default-sort: NUME_SPECIALITATE
+    sort-direction: Ascending (Nulls Last)
+
+- # ====== List of Values: CLIENTI.NUME ========================
+  id: 1424430146227934870
+  identification: 
+    name: CLIENTI.NUME
+
+  subscription: 
+    version-number: 15599866267326
+
+  source: 
+    location: Local Database
+    type: Table / View
+    table-owner: Parsing Schema
+    table-name: CLIENTI
+
+  column-mapping: 
+    return: ID_CLIENT
+    display: NUME
+    default-sort: NUME
+    sort-direction: Ascending (Nulls Last)
+
+- # ====== List of Values: MEDICI.NUME =========================
+  id: 1424430826938934871
+  identification: 
+    name: MEDICI.NUME
+
+  subscription: 
+    version-number: 15599866267388
+
+  source: 
+    location: Local Database
+    type: Table / View
+    table-owner: Parsing Schema
+    table-name: MEDICI
+
+  column-mapping: 
+    return: ID_MEDIC
+    display: NUME
+    default-sort: NUME
+    sort-direction: Ascending (Nulls Last)
+
+- # ====== List of Values: LISTA MEDICI ========================
+  id: 1436608883544824401
+  identification: 
+    name: LISTA MEDICI
+
+  subscription: 
+    version-number: 15599870052226
+
+  source: 
+    location: Local Database
+    type: SQL Query
+    sql-query: |
+      select nume || ' ' || prenume as "Numele Intreg"
+      from medici
+
+  column-mapping: 
+    return: Numele Intreg
+    display: Numele Intreg
+    default-sort: Numele Intreg
+    sort-direction: Ascending (Nulls Last)
+
